@@ -1,7 +1,8 @@
-import { View, Text, Pressable, SafeAreaView, TextInput, KeyboardAvoidingView } from 'react-native'
-import React from 'react'
-import { Link, useRouter } from 'expo-router'
 import MaterialIcons from '@expo/vector-icons/MaterialIcons'
+import { Link, useRouter } from 'expo-router'
+import React from 'react'
+import { KeyboardAvoidingView, Pressable, Text, TextInput, View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function login() {
     const navigate = useRouter()
@@ -39,11 +40,14 @@ export default function login() {
             <MaterialIcons name='fingerprint' size={30} color={'orange'}/>
         </View>
 <Pressable>
-<Text className='mt-5 font-light'>Didn't have an account? <Link href={'./signup'} className='text-orange-600 text-sm'>Sign Up</Link></Text>
+<Text className='mt-5 font-light'>Didn't have an account? <Link href={"./"} className='text-orange-600 text-sm'>Sign Up</Link></Text>
 </Pressable>
 
       </View>
 
+      <View>
+      <Link href={'../'} className='text-blue-500 p-3 bg-green-500'> <Text> Back Home</Text></Link>
+      </View>
       </View>
 
     </SafeAreaView>
